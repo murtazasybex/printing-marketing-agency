@@ -1,10 +1,5 @@
-import { useState } from "react";
 import { Home } from "./Pages/Home";
 import { Cart } from "./Pages/Cart";
-import { Order } from "./Pages/Order";
-
-//side bar
-import Sidebar from "./components/Sidebar";
 //react router dom
 import {
   createBrowserRouter,
@@ -29,13 +24,15 @@ import {
   Testimonials,
   Value,
 } from "./components";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        <Route index element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/orders" element={<Order />} />
+        {/* <Route index element={<Home />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/myprojects" element={<Projects />} />
+        <Route path="/cart" element={<Cart />} /> */}
       </Route>
     )
   );

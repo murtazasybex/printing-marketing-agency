@@ -39,7 +39,11 @@ const Cartitems = () => {
                   <td>$24.00</td>
                   <td>
                     <div className="border w-24 p-2">
-                      <input type="number" className="w-full outline-0" />
+                      <input
+                        type="number"
+                        name="number"
+                        className="w-full outline-0"
+                      />
                     </div>
                   </td>
                   <td>$200.00</td>

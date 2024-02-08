@@ -22,6 +22,7 @@ const CTAThree = () => {
             </p>
             <input
               type="text"
+              name="subscription"
               className="outline-none rounded-lg w-full font-light py-1.5 px-3"
               placeholder="Subscription email"
             />

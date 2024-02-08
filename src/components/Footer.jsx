@@ -56,43 +56,51 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mx-auto flex gap-2 w-full max-w-[390px] pt-8 md:pt-0">
-              <img src={fb} className="hover:invert transition-colors" alt="" />
-              <img src={x} className="hover:invert transition-colors" alt="" />
+            <div className="mx-auto flex gap-2 pt-8 md:pt-0">
+              <img
+                src={fb}
+                className="hover:invert transition-colors w-full max-w-[40px]"
+                alt=""
+              />
+              <img
+                src={x}
+                className="hover:invert transition-colors w-full max-w-[40px]"
+                alt=""
+              />
               <img
                 src={insta}
-                className="hover:invert transition-colors"
+                className="hover:invert transition-colors w-full max-w-[40px]"
                 alt=""
               />
               <img
                 src={pinterest}
-                className="hover:invert transition-colors"
+                className="hover:invert transition-colors w-full max-w-[40px]"
                 alt=""
               />
               <img
                 src={youtube}
-                className="hover:invert transition-colors"
+                className="hover:invert transition-colors w-full max-w-[40px]"
                 alt=""
               />
               <img
                 src={wordpress}
-                className="hover:invert transition-colors"
+                className="hover:invert transition-colors w-full max-w-[40px]"
                 alt=""
               />
               <img
                 src={linkedin}
-                className="hover:invert transition-colors"
+                className="hover:invert transition-colors w-full max-w-[40px]"
                 alt=""
               />
               <img
                 src={network}
-                className="hover:invert transition-colors"
+                className="hover:invert transition-colors w-full max-w-[40px]"
                 alt=""
               />
             </div>
           </div>
         </div>
-        <div className="bg-black bg-cover flex justify-between w-full py-6 px-5">
+        <div className="bg-black bg-cover flex justify-between w-full py-10 px-5">
           <div className="space-y-2">
             <ul className="list-none flex text-white gap-3 font-light md:flex-row flex-col">
               <li className="underline hover:no-underline">1.866.207.4955</li>
@@ -114,7 +122,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 md:items-center items-start">
             <img src={country} className="w-full max-w-[]" alt="" />
             <img src={arrow} alt="" />
           </div>

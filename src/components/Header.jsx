@@ -23,6 +23,7 @@ const Navbar = () => {
               </button>
               <input
                 type="text"
+                name="search"
                 placeholder="Search"
                 className="bg-transparent outline-0 px-3 w-full font-extralight"
               />
