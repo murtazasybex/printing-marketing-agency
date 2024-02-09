@@ -1,30 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Carousel from "react-grid-carousel";
-import { carouselItems, responsiveLayout } from "../constants";
+import { carouselItems } from "../constants";
 
 const Categories = () => {
-  const [cols, setCols] = useState(8);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      const layout = responsiveLayout.find(
-        (layout) => width >= layout.breakpoint
-      );
-      if (layout) {
-        setCols(layout.cols);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [responsiveLayout]);
-
   return (
     <>
       <section className="w-full container mx-auto relative z-0">
