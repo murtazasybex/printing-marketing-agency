@@ -6,9 +6,9 @@ const Banner = () => {
     <>
       <section className="w-full container mx-auto relative">
         <div className="home-banner bg-cover bg-left md:bg-center rounded-xl w-full bg-no-repeat my-6">
-          <div className="flex justify-between lg:flex-row flex-col md:py-0 py-16 items-center">
+          <div className="flex justify-between lg:flex-row flex-col md:py-6 lg:py-0 py-16 items-center">
             <div className="space-y-5 pl-10">
-              <h1 className="font-bold uppercase text-[28px] md:text-[42px] text-white">
+              <h1 className="font-bold uppercase text-[28px] md:text-[34px] lg:text-[42px] text-white">
                 PRINTING DIGITAL SERVICE AGENCY{" "}
               </h1>
               <p className="md:text-[18px] text-[14px] text-white">
@@ -19,7 +19,7 @@ const Banner = () => {
               </button>
             </div>
             <div className="">
-              <img src={bannerimg} className="w-full" alt="" />
+              <img src={bannerimg} className="w-full pt-10" alt="" />
             </div>
           </div>
         </div>

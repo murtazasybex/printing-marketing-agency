@@ -29,3 +29,17 @@ export {
   Value,
   Footer,
 };
+
+export const categories = [
+  "Deals",
+  "Business Cards",
+  "Postcards & Print Advertising",
+  "Signs, Banners & Posters",
+  "Labels, Stickers & Packaging",
+  "Home & Gifts",
+  "Celebrations, Invitations & Stationery",
+  "Wedding",
+  "Clothing & Bags",
+  "Promotional Products",
+  "Design & Logo",
+];

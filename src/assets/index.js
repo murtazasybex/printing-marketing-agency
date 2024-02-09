@@ -1,6 +1,6 @@
 import advisor from "../assets/advisor.svg";
 import arrow from "../assets/arrow.svg";
-import bannerimg from "../assets/bannerimg.svg";
+import bannerimg from "../assets/bannerimg.png";
 import bestsellerone from "../assets/bestseller-one.svg";
 import bestsellertwo from "../assets/bestseller-two.svg";
 import bestsellerthree from "../assets/bestseller-three.svg";
@@ -56,10 +56,14 @@ import weddingcard from "../assets/weddingcard.svg";
 import wordpress from "../assets/wordpress.svg";
 import x from "../assets/x.svg";
 import youtube from "../assets/youtube.svg";
+import menu from "../assets/menu.svg";
+import close from "../assets/close.svg";
 
 export {
   advisor,
   arrow,
+  close,
+  menu,
   bannerimg,
   bestsellerone,
   bestsellertwo,

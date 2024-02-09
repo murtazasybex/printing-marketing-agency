@@ -13,7 +13,7 @@ const CTAThree = () => {
               alt=""
             />
           </div>
-          <div className="space-y-2 flex flex-col items-center justify-center w-full max-w-[700px] mx-auto text-center md:pb-0 pb-12">
+          <div className="space-y-2 flex flex-col items-center justify-center w-full max-w-[600px] mx-auto text-center md:pb-0 pb-12">
             <h1 className="font-bold md:text-[28px] text-[22px] text-white">
               It's good to be on the list.
             </h1>
@@ -26,15 +26,18 @@ const CTAThree = () => {
               className="outline-none rounded-lg w-full font-light py-1.5 px-3"
               placeholder="Subscription email"
             />
-            <p className="text-[14px] text-white font-light pb-2">
+            <p className="text-[14px] text-white font-light">
               Yes, I'd like to receive special offer emails from our website ,
               as well as news about products, services and my designs in
               progress. Read our
             </p>
-            <a href="#" className="underline text-white text-[14px] font-light">
+            <a
+              href="#"
+              className="underline text-white text-[14px] font-light pb-3"
+            >
               Privacy and Cookie policy.
             </a>
-            <button className="py-2 px-14 bg-white hover:bg-white/80 transition-colors text-[#5C5C5C] rounded-full font-semibold mt-5">
+            <button className="py-2 px-14 bg-white hover:bg-white/80 transition-colors text-[#5C5C5C] rounded-full font-semibold">
               Submit
             </button>
           </div>

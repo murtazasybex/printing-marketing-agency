@@ -13,7 +13,7 @@ const CTATwo = () => {
               alt=""
             />
           </div>
-          <div className="space-y-3 flex flex-col items-start justify-start w-full max-w-[600px] mx-auto text-start md:pb-0 pb-12 px-2">
+          <div className="space-y-3 flex flex-col items-start justify-start w-full max-w-[500px] mx-auto text-start md:pb-6 pb-12 px-2">
             <h1 className="font-bold md:text-[28px] text-[22px] text-white">
               Bags, Bottels and catalogues
             </h1>

@@ -6,7 +6,7 @@ const Info = () => {
       <section className="w-full container mx-auto relative">
         <div className="bg-[#F8F8F8] w-full md:py-24 py-18">
           <div className="flex justify-around flex-wrap space-x-3 lg:flex-nowrap md:py-0 py-16 items-center px-2">
-            <div className="text-start w-full max-w-[520px] px-2">
+            <div className="text-start w-full max-w-[500px] px-2">
               <h1 className="font-bold md:text-[44px] text-[28px] text-black">
                 Here for small <br />
                 business since 1995.

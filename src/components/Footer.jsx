@@ -1,32 +1,22 @@
 import React from "react";
-import {
-  arrow,
-  country,
-  fb,
-  insta,
-  linkedin,
-  network,
-  pinterest,
-  wordpress,
-  x,
-  youtube,
-} from "../assets";
+import { arrow, country } from "../assets";
+import { socialMediaIcons } from "../constants";
 
 const Footer = () => {
   return (
-    <>
-      <footer>
-        <div className="bg-[#151515] bg-cover w-full md:py-20 py-6 px-5">
-          <div className="flex justify-evenly flex-wrap lg:flex-nowrap md:py-0 py-16 space-y-8 items-center px-2">
-            <div className="text-start mx-auto w-full max-w-[320px] space-y-3">
-              <h1 className="font-medium text-[16px] text-[#F8F8F8] underline">
-                Absolutely Guaranteed.
-              </h1>
-              <p className="text-[14px] text-[#F8F8F8] pb-5">
-                Every time. Any reason. Or we'll make it right.
-              </p>
-            </div>
-            <div className="text-start mx-auto w-full max-w-[300px] space-y-3">
+    <footer>
+      <div className="bg-[#151515] bg-cover w-full md:py-20 py-6 px-5">
+        <div className="flex justify-evenly flex-wrap xl:flex-nowrap md:py-0 py-16 space-y-8 items-center px-2">
+          <div className="text-start mx-auto w-full max-w-[320px] space-y-3">
+            <h1 className="font-medium text-[16px] text-[#F8F8F8] underline">
+              Absolutely Guaranteed.
+            </h1>
+            <p className="text-[14px] text-[#F8F8F8] pb-5">
+              Every time. Any reason. Or we'll make it right.
+            </p>
+          </div>
+          <div className="flex justify-around w-full md:max-w-[700px] space-x-6">
+            <div className="text-start space-y-3">
               <h1 className="font-semibold text-[14px] text-white">
                 Let Us Help
               </h1>
@@ -40,7 +30,7 @@ const Footer = () => {
                 <li className="hover:underline">Accessibility</li>
               </ul>
             </div>
-            <div className="text-start mx-auto w-full max-w-[300px] space-y-3">
+            <div className="text-start space-y-3">
               <h1 className="font-semibold text-[14px] text-white">
                 Our Company
               </h1>
@@ -56,79 +46,47 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mx-auto flex gap-2 pt-8 md:pt-0">
+          </div>
+          <div className="flex flex-wrap gap-5 pt-12 md:pt-8">
+            {socialMediaIcons.map((icon, index) => (
               <img
-                src={fb}
-                className="hover:invert transition-colors w-full max-w-[40px]"
+                key={index}
+                src={icon.image}
+                className="hover:invert transition-colors w-full max-w-[30px]"
                 alt=""
               />
-              <img
-                src={x}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-              <img
-                src={insta}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-              <img
-                src={pinterest}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-              <img
-                src={youtube}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-              <img
-                src={wordpress}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-              <img
-                src={linkedin}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-              <img
-                src={network}
-                className="hover:invert transition-colors w-full max-w-[40px]"
-                alt=""
-              />
-            </div>
+            ))}
           </div>
         </div>
-        <div className="bg-black bg-cover flex justify-between w-full py-10 px-5">
-          <div className="space-y-2">
-            <ul className="list-none flex text-white gap-3 font-light md:flex-row flex-col">
-              <li className="underline hover:no-underline">1.866.207.4955</li>
-              <li className="underline hover:no-underline">Home</li>
-              <li className="underline hover:no-underline">
-                Privacy and Cookie Policy
-              </li>
-              <li className="underline hover:no-underline">
-                Terms and Conditions
-              </li>
-              <li className="underline hover:no-underline">Legal Notice</li>
-            </ul>
-            <p className="text-white font-light text-[11px]">
-              A CIMPRESS company © 2001-2024. All rights reserved.
-            </p>
-            <p className="text-white font-light text-[11px]">
-              Unless stated otherwise, prices are exclusive of delivery and
-              product options.
-            </p>
-          </div>
-
-          <div className="flex space-x-2 md:items-center items-start">
-            <img src={country} className="w-full max-w-[]" alt="" />
-            <img src={arrow} alt="" />
-          </div>
+      </div>
+      {/* Bottom Section */}
+      <div className="bg-black bg-cover flex flex-col md:flex-row justify-between w-full py-10 px-5">
+        <div className="md:w-1/1 space-y-2">
+          <ul className="list-none flex text-white text-[14px] gap-3 font-light md:flex-row flex-col">
+            <li className="underline hover:no-underline">1.866.207.4955</li>
+            <li className="underline hover:no-underline">Home</li>
+            <li className="underline hover:no-underline">
+              Privacy and Cookie Policy
+            </li>
+            <li className="underline hover:no-underline">
+              Terms and Conditions
+            </li>
+            <li className="underline hover:no-underline">Legal Notice</li>
+          </ul>
+          <p className="text-white font-light text-[12px]">
+            A CIMPRESS company © 2001-2024. All rights reserved.
+          </p>
+          <p className="text-white font-light text-[12px]">
+            Unless stated otherwise, prices are exclusive of delivery and
+            product options.
+          </p>
         </div>
-      </footer>
-    </>
+        <div className="flex justify-center space-x-2 md:justify-end items-center mt-8 md:mt-0">
+          <img src={country} className="" width={35} height={35} alt="" />
+          <img src={arrow} alt="" />
+        </div>
+      </div>
+    </footer>
   );
 };
 

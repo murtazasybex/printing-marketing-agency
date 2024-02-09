@@ -1,87 +1,59 @@
-import React from "react";
-import {
-  bookcover,
-  bottle,
-  cards,
-  cup,
-  flyers,
-  frame,
-  gift,
-  lamp,
-  tshirt,
-  weddingcard,
-} from "../assets";
+import React, { useState, useEffect } from "react";
+import Carousel from "react-grid-carousel";
+import { carouselItems, responsiveLayout } from "../constants";
 
 const Categories = () => {
+  const [cols, setCols] = useState(8);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const layout = responsiveLayout.find(
+        (layout) => width >= layout.breakpoint
+      );
+      if (layout) {
+        setCols(layout.cols);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [responsiveLayout]);
+
   return (
     <>
-      <section className="w-full container mx-auto relative">
+      <section className="w-full container mx-auto relative z-0">
         <div className="pb-10">
-          <h1 className="font-bold text-[18px] py-3 px-2 pl-6">
+          <h1 className="font-bold text-[18px] py-6 px-2 pl-6">
             Explore all categories
           </h1>
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-5 px-2">
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={bottle} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Bottel</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={cards} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Cards</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={frame} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Frame</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={gift} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Gift Box</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={lamp} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Lamp</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={weddingcard} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Wedding card</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={cup} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Cup</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={bookcover} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Book cover</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={tshirt} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">T-Shirt</p>
-            </div>
-            <div className="w-full max-w-[130px] my-5">
-              <div className="drop-shadow-lg bg-[#1A7E91] flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
-                <img src={flyers} className="" alt="" />
-              </div>
-              <p className="text-center pt-3 text-[14px]">Flyers</p>
-            </div>
-          </div>
+          <Carousel
+            loop
+            autoplay
+            autoplaySpeed={5000}
+            responsiveLayout={[
+              { breakpoint: 2000, cols: 12 },
+              { breakpoint: 1700, cols: 9 },
+              { breakpoint: 1300, cols: 7 },
+              { breakpoint: 1024, cols: 5 },
+              { breakpoint: 660, cols: 3 },
+              { breakpoint: 320, cols: 2 },
+            ]}
+          >
+            {carouselItems.map((item, index) => (
+              <Carousel.Item key={index} className="w-full max-w-[130px] my-5">
+                <div className="hover:drop-shadow-md mx-auto bg-[#1A7E91] hover:bg-[#1A7E91]/90 transition-colors flex items-center justify-center rounded-full w-full h-full max-h-[120px] max-w-[120px]">
+                  <img src={item.image} className="" alt="" />
+                </div>
+                <p className="text-center pt-3 text-[14px]">{item.label}</p>
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </div>
       </section>
     </>
